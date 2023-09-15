@@ -21,8 +21,8 @@
 }
 
 .card {
-    height: 120px;
-    width: 90px;
+    height: 150px;
+    width: 120px;
     background-color: aqua;
     border-radius: 10px;
     cursor: pointer;
@@ -33,3 +33,8 @@
     transform: scale(1.1)
 }
 
+.card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
