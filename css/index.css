@@ -4,12 +4,32 @@
     box-sizing: border-box;
 }
 
+.container {
+    place-items: center;
+    display: grid;
+    min-height: 100vh;
+}
+
 .heading {
     text-align: center;
 }
 
-.container {
-    align-items: center;
+.cards {
     display: grid;
-
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2em;
 }
+
+.card {
+    height: 120px;
+    width: 90px;
+    background-color: aqua;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
+
+.card:hover {
+    transform: scale(1.1)
+}
+
