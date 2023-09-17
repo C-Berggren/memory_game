@@ -1,5 +1,41 @@
-const tilesContainer = document.querySelector("cards");
-const animals = ["bee", "butterfly", "cat", "cow", "deer", "dog", "elephant", "giraffe", "horse", "lamb", "lion", "owl", "raccoon", "tiger", "turtle", "wolf"];
+let counter = 0;
+let firstSelection = "";
+let secondSelection = "";
 
-animalsPicklist[...animals ...animals];
-console.log(animalPicklist);
+const cards = document.querySelectorAll(".cards .card");
+cards.forEach((card) => {
+    card.addEventListener("click", () => {
+        card.classList.add("clicked");
+
+        if (counter === 0) {
+            firstSelection = card.getAttribute("animal");
+            counter++;
+        } else {
+            secondSelection = card.getAttribute("animal");
+            counter = 0;
+
+            if (firstSelection === secondSelection) {
+                const correctCards = document.querySelectorAll(
+                    ".card[animal='" + firstSelection + "']"
+                );
+
+                correctCards[0].classList.add("checked");
+                correctCards[0].classList.remove("clicked");
+                correctCards[1].classList.add("checked");
+                correctCards[1].classList.remove("clicked");
+            } else {
+                const incorrectCards = document.querySelectorAll(".card.clicked");
+
+                incorrectCards[0].classList.add("shake");
+                incorrectCards[1].classList.add("shake");
+
+                setTimeout(() => {
+                    incorrectCards[0].classList.remove("shake");
+                    incorrectCards[0].classList.remove("clicked");
+                    incorrectCards[1].classList.remove("shake");
+                    incorrectCards[1].classList.remove("clicked");
+                }, 800);
+            }
+        }
+    });
+});
