@@ -9,14 +9,16 @@
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/index.css">
-    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mulish:wght@300&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+    </style>
 </head>
 
 <body>
     <!-- Memory card div container -->
     <div class="container">
         <h2 class="heading">Memory Game</h2>
-        <button class="reset" onclick="window.location.reload();">Start Over</button>
+        
         <div class="cards">
             
             <div class="card" animal="turtle">
@@ -117,7 +119,9 @@
             <div class="card" animal="raccoon">
                 <img src="images/raccoon.jpg" alt="image of a raccoon">
         </div>
-        
+    </div>
+    <div id="reset-box">
+        <button class="reset" onclick="window.location.reload();">Start Over</button>
     </div>
     <!-- Javascript -->
     <script>
