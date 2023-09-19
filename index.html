@@ -125,12 +125,12 @@
     </div>
     <!-- Javascript -->
     <script>
+
         let counter = 0;
             let firstSelection = "";
             let secondSelection = "";
-
             const cards = document.querySelectorAll(".cards .card");
-            
+
             cards.forEach((card) => {
                 card.addEventListener("click", () => {
                     card.classList.add("clicked");
@@ -164,10 +164,13 @@
                                 incorrectCards[1].classList.remove("clicked");
                             }, 800);
                         }
+                        
                     }
+                    
                 });
                 
             });
+            
             
     </script>
 </body>
