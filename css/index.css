@@ -41,6 +41,10 @@
     transform: scale(1.03);
 }
 
+.card.flip {
+    transform: rotateY(180deg);
+}
+
 .card img {
     height: 140px;
     width: 100%;
