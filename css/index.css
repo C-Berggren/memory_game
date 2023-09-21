@@ -8,7 +8,7 @@
 body {
     height: 100vh;
     display: flex;
-    background-color: #3a3a3a;
+    background-color: #e2d7d7e1;
 }
 
 .heading {
@@ -19,49 +19,47 @@ body {
 }
 
 .cards {
-    display: grid;
-    place-items: center;
-    min-height: 100vh;
     width: 640px;
     height: 640px;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
-    border: 5px solid red;
+    perspective: 1000px;
+
 }
 
 .card {
-    width: 120px;
-    height: 150px;
-    border: 5px solid #3a3a3a;
+    width: calc(20% - 10px);
+    height: calc(20% - 10px);
     position: relative;
+    margin: 5px;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
 }
 
-.card.img {
-    width: 120px;
-    height: 150px;
+.card.flip {
+    transform: rotateY(180deg);
 }
 
 .front-face,
 .back-face {
-    position: relative;
-    width: 120px;
-    height: 150px;
-    padding: 20px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
     border-radius: 10px;
+    backface-visibility: hidden;
     background-color: #4CAF50;
+    
 }
 
-.card.clicked {
-    background-color: orange;
+.front-face {
+    transform: rotateY(180deg);
 }
 
-.card.checked {
-    background-color: lightgreen;
-}
-
-.card.clicked img,
-.card.checked img {
-    opacity: 1;
+.card:active {
+    transform: scale(.95);
+    transition: transform .2s;
 }
 
 .card.shake {
