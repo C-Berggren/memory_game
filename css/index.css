@@ -11,33 +11,36 @@ body {
     background-color: #e2d7d7e1;
 }
 
-.heading {
-    text-align: center;
-    font-family: "Poppins", sans-serif;
-    font-size: 2rem;
-    font-weight: 500;
+.container {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 640px;
+    height: 640px;
     padding-bottom: 30px;
 }
 
-.container {
-    position: center;
+.heading {
+    text-align: center;
+    font-family: "Nunito", sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
     margin: auto;
+    width: 50%;
 }
 
 .cards {
-    padding: 20px;
     width: 640px;
     height: 640px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
     perspective: 1000px;
-    border: 5px solid red;
 }
 
 .card {
-    width: calc(20% - 10px);
-    height: calc(20% - 10px);
+    width: calc(25% - 10px);
+    height: calc(33.33% - 10px);
     position: relative;
     margin: 5px;
     transform: scale(1);
@@ -77,18 +80,18 @@ body {
 /* reset button */
 .reset {
     background-color: #4CAF50;
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 40px;
-        font-weight: 600;
-        border-radius: 30%;
-        cursor: pointer;
-        border: 5px solid #3a3a3a;
-        transition: 0.3s all ease;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 40px;
+    font-weight: 600;
+    border-radius: 30%;
+    cursor: pointer;
+    border: 5px solid #3a3a3a;
+    transition: 0.3s all ease;
 }
 
 .reset:hover {
