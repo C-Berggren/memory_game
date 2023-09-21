@@ -16,16 +16,23 @@ body {
     font-family: "Poppins", sans-serif;
     font-size: 2rem;
     font-weight: 500;
+    padding-bottom: 30px;
+}
+
+.container {
+    position: center;
+    margin: auto;
 }
 
 .cards {
+    padding: 20px;
     width: 640px;
     height: 640px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
     perspective: 1000px;
-
+    border: 5px solid red;
 }
 
 .card {
