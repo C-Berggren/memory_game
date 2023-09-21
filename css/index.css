@@ -5,10 +5,10 @@
     font-family: 'Nunito', sans-serif;
 }
 
-.container {
-    display: grid;
-    place-items: center;
-    min-height: 100vh;
+body {
+    height: 100vh;
+    display: flex;
+    background-color: #3a3a3a;
 }
 
 .heading {
@@ -20,37 +20,35 @@
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-gap: 2em;
-    
+    place-items: center;
+    min-height: 100vh;
+    width: 640px;
+    height: 640px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 5px solid red;
 }
 
 .card {
-    height: 150px;
     width: 120px;
-    background-color: #ffff00;
-    border-radius: 10px;
-    display: grid;
-    place-items: center;
-    cursor: pointer;
-    transition: 0.3s all ease;
+    height: 150px;
     border: 5px solid #3a3a3a;
+    position: relative;
 }
 
-.card:hover {
-    transform: scale(1.03);
+.card.img {
+    width: 120px;
+    height: 150px;
 }
 
-.card.flip {
-    transform: rotateY(180deg);
-}
-
-.card img {
-    height: 140px;
-    width: 100%;
+.front-face,
+.back-face {
+    position: relative;
+    width: 120px;
+    height: 150px;
+    padding: 20px;
     border-radius: 10px;
-    opacity: 0;
-    transition: 0.3s all ease;
+    background-color: #4CAF50;
 }
 
 .card.clicked {
