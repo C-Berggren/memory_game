@@ -5,12 +5,18 @@ let firstCard, secondCard;
 
 function flipCard() {
     this.classList.toggle('flip');
-
+    // first click
     if (!hasFlippedCard) {
         hasFlippedCard = true;
         firstCard = this;
+    } else {
+        // second click
+        hasFlippedCard = false;
+        secondCard = this;
 
-        console.log({hasFlippedCard, firstCard});
+        // match card
+        console.log(firstCard.dataset.animal)
+        console.log(secondCard.dataset.animal)
     }
 }
 

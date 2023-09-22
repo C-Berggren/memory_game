@@ -92,8 +92,6 @@ body {
     cursor: pointer;
     border: 5px solid #3a3a3a;
     transition: 0.3s all ease;
-    position: absolute;
-    margin: auto;
 }
 
 .reset:hover {
