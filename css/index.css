@@ -8,7 +8,7 @@
 body {
     height: 100vh;
     display: flex;
-    background-color: #e2d7d7e1;
+    background-color: #f3e77fe1;
 }
 
 .container {
@@ -93,7 +93,7 @@ body {
     border: 5px solid #3a3a3a;
     transition: 0.3s all ease;
     position: absolute;
-    bottom: 700px;
+    top: 875px;
     left: 190px;
 }
 
